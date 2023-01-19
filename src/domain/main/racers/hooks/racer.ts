@@ -41,7 +41,7 @@ export function useRacer() {
         }
       });
 
-      data = sortBy(data, "probability", "desc");
+      data = sortBy(data, "probability", "asc");
 
       setItems(data);
     },
