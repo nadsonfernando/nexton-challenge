@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 
 import isEqual from "lodash/isEqual";
-import sortBy from "lodash/sortBy";
+import orderBy from "lodash/orderBy";
 
 import { Racer } from "@models/racer";
 import { findRacers } from "@services/resources/racers";
@@ -41,7 +41,7 @@ export function useRacer() {
         }
       });
 
-      data = sortBy(data, "probability", "asc");
+      data = orderBy(data, "probability", "desc");
 
       setItems(data);
     },
